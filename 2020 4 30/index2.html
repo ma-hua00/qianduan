@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			body{
+				background-color: #808080;
+			}
+			.main{
+				margin: auto;
+				width: 700px;
+				height: 60px;
+				background-color: #FFFFFF;
+			}
+			.main ul li{
+				list-style: none;
+				float: left;
+			}
+			.main ul li a{
+				display: block;
+				text-decoration: none;
+				color: #000000;
+				position: relative;
+				padding: 20px;
+				width: 100px;
+			}
+			.main ul li a::before{
+				content: "";
+				display:block ;
+				height: 3px;
+				width: 140px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: yellowgreen;
+				transition: all .7s;
+			}
+			.main ul li:nth-child(2) a::before{
+				background-color: #8A2BE2;
+			}
+			.main ul li:nth-child(3) a::before{
+				background-color: brown;
+			}
+			.main ul li:nth-child(4) a::before{
+				background-color: blueviolet;
+			}
+			.main ul li:nth-child(5) a::before{
+				background-color: green;
+			}
+			.main ul li:hover a::before{
+				height: 63px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<ul>
+				<li><a href="#">菜单1</a></li>
+				<li><a href="#">菜单2</a></li>
+				<li><a href="#">菜单3</a></li>
+				<li><a href="#">菜单4</a></li>
+				<li><a href="#">菜单5</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
