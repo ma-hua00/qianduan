@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+    <style type="text/css">
+      body{
+          margin: 0;
+          padding: 0;
+          background-color: #333;
+      }
+      .container{
+          text-align: center;
+          margin-top: 100px;
+      }
+      .img{
+          width: 310px;
+          height: 500px;
+          margin: 10px;
+          display: inline-block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transition: .4s;
+      }
+      .img1{
+          background-image: url(./img/1.png);
+      }
+      .img2{
+          background-image: url(./img/2.png);
+      }
+      .img:hover{
+           background-position: bottom center;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img img1"></div>
+        <div class="img img2"></div>
+    </div>
+</body>
+</html>
