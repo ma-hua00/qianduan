@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html</title>
+</head>
+    <style type="text/css">
+    .a{
+        width: 58px;
+        height: 25px;
+        padding: 2px;
+        text-align: center;
+        background-color: beige;
+        border: 2px solid rgb(182, 187, 173);
+    }
+    .a.m{ 
+        position: absolute;
+        left: 500px;
+        top:400px;   
+    }
+    .a.t{
+        position:absolute;
+        top: 350px;
+        left: 500px;
+    }
+    .a.b{
+        position: absolute;
+        top: 450px;
+        left: 500px;
+    }
+    .a.l{
+        position: absolute;
+        top:400px;
+        left: 420px;
+    }
+    .a.r{
+        position: absolute;
+        top: 400px;
+        left: 580px;    
+    }
+    /* 分割 */
+    .a::after{
+        padding: 3px;
+        position: absolute;
+        right: -47px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        word-break: keep-all;
+        opacity: 0;
+        transition: all 1.0s;
+    }
+    .a::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-right-color:black;
+        border-left: 0;
+        right: -9px; 
+        top: 5px;
+        position: absolute;
+        opacity: 0;
+        transition: all 1.0s;
+    }
+    .a.m::after{
+        content: "中间";
+    }
+    .a.t::after{
+        content: "上面";
+    }
+    .a.b::after{
+        content: "下面";
+    }
+    .a.l::after{
+        content: "左边";
+    }
+    .a.r::after{
+        content: "右边";
+    }
+    /* 分割 */
+    .a:hover:after{
+        opacity: 1;
+    }
+    .a:hover:before{
+        opacity: 1;  
+    }
+    </style>
+<body>
+        <p class="a m">middle</p>
+        <p class="a t">top</p>
+        <p class="a b">bottom</p>
+        <p class="a l">left</p>
+        <p class="a r">right</p>
+</body>
+</html>
