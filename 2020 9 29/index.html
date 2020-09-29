@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    成绩: <input type="text" id="chengji" placeholder="请输入成绩">
+    <input type="button" value="计算" onclick="jisuan()"><br>
+    结果: <input type="text" id="jieguo">
+    <script>
+        function jisuan(){
+            var chengji;
+            chengji=document.getElementById("chengji").value;
+            if(chengji>=0&&chengji<=100){
+                switch(chengji>=0&&chengji<=100){
+                    case chengji>=90:document.getElementById("jieguo").value="优秀";break;
+                    case chengji>=80:document.getElementById("jieguo").value="良好";break;
+                    case chengji>=60:document.getElementById("jieguo").value="及格";break;
+                    default:document.getElementById("jieguo").value="不及格";
+                }
+            }else{
+                document.getElementById("jieguo").value="请重新输入成绩";
+            }
+        }
+    </script>
+</body>
+</html>
