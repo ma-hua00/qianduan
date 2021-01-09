@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="0" id="text"><br>
+    <input type="button" value="C" id="clear" onclick="qingkong()"><br>
+    <input type="button" value="7" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="8" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="9" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="/" id="fuhao" onclick="jisaun(this)"><br>
+    <input type="button" value="4" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="5" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="6" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="*" id="fuhao" onclick="jisuan(this)"><br>
+    <input type="button" value="1" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="2" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="3" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="-" id="fuhao" onclick="jisuan(this)"><br>
+    <input type="button" value="0" id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="." id="shuzi" onclick="shuzi(this)">
+    <input type="button" value="+" id="fuhao" onclick="jisuan(this)">
+    <input type="button" value="=" onclick="jieguo()"><br>
+    <script>
+        var num="";
+        var num1,num2;
+        var fuhao="";
+        function qingkong(){
+            document.getElementById("text").value="";
+            num1=0;
+            num2=0;
+            fuhao="";
+            num="";
+        }
+        function shuzi(e){
+            num+=e.value;
+            document.getElementById("text").value=num;
+        }
+        function jisuan(f){
+            num1=Number(num);
+            document.getElementById("text").value="";
+            num="";
+            fuhao=f.value;
+        }
+        function jieguo(){
+            var jieguo;
+            num2=Number(num);
+            if(fuhao=="+"){
+                jieguo=num1+num2;
+            }else if(fuhao=="-"){
+                jieguo=num1-num2;
+            }else if(fuhao=="*"){
+                jieguo=num1*num2;
+            }else if(fuhao=="/"){
+                jieguo=num1/num2;
+            }
+            document.getElementById("text").value=jieguo;
+        }
+    </script>
+</body>
+</html>

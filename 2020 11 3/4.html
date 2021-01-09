@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            margin: auto;
+        }
+        div{
+            background-color: #ccc;
+            width: 400px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>提交成功</h2>
+        <a href="http://www.example.com">
+            <span id="seconds">3</span>秒后系统回自动跳转，也可单击此链接跳转
+        </a>
+    </div>
+    <script>
+        function timing(secs,url) {
+            var seconds=document.getElementById("seconds");
+            seconds.innerHTML=--secs;
+            if(secs>0){
+                setTimeout('timing('+secs+',\''+url+'\')',1000);
+            }else{
+                location.href=url;
+            }
+          };
+          timing(3,'http://www.baidu.com');
+    </script>
+</body>
+</html>
